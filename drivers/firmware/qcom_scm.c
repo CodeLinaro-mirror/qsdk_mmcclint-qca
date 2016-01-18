@@ -94,3 +94,14 @@ int qcom_scm_hdcp_req(struct qcom_scm_hdcp_req *req, u32 req_cnt, u32 *resp)
 	return __qcom_scm_hdcp_req(req, req_cnt, resp);
 }
 EXPORT_SYMBOL(qcom_scm_hdcp_req);
+
+/**
+ * qcom_scm_set_watchdog_regsave() - register save addr on wdog reset
+ * @buf: buffer
+ * @size: size of buffer
+ */
+int qcom_scm_set_watchdog_regsave(void *buf, size_t size)
+{
+	return __qcom_scm_set_watchdog_regsave(buf, size);
+}
+EXPORT_SYMBOL(qcom_scm_set_watchdog_regsave);

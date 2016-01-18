@@ -36,4 +36,6 @@ extern void qcom_scm_cpu_power_down(u32 flags);
 
 extern u32 qcom_scm_get_version(void);
 
+extern int qcom_scm_set_watchdog_regsave(void *buf, size_t size);
+
 #endif

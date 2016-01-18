@@ -501,3 +501,9 @@ int __qcom_scm_hdcp_req(struct qcom_scm_hdcp_req *req, u32 req_cnt, u32 *resp)
 	return qcom_scm_call(QCOM_SCM_SVC_HDCP, QCOM_SCM_CMD_HDCP,
 		req, req_cnt * sizeof(*req), resp, sizeof(*resp));
 }
+
+int __qcom_scm_set_watchdog_regsave(void *buf, size_t size)
+{
+	return qcom_scm_call(QCOM_SCM_SVC_UTIL, QCOM_SCM_CMD_SET_REGSAVE,
+			buf, size, NULL, 0);
+}

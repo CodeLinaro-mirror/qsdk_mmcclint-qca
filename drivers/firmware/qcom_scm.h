@@ -36,6 +36,10 @@ extern int __qcom_scm_is_call_available(u32 svc_id, u32 cmd_id);
 extern int __qcom_scm_hdcp_req(struct qcom_scm_hdcp_req *req, u32 req_cnt,
 		u32 *resp);
 
+#define QCOM_SCM_SVC_UTIL		0x3
+#define QCOM_SCM_CMD_SET_REGSAVE	0x2
+extern int __qcom_scm_set_watchdog_regsave(void *buf, size_t size);
+
 /* common error codes */
 #define QCOM_SCM_ENOMEM		-5
 #define QCOM_SCM_EOPNOTSUPP	-4
